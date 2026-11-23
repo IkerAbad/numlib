@@ -174,6 +174,14 @@ def _format(value: float | None) -> str:
     return f"{value:.2e}"
 
 
+def _max_eigenvector_error(rows: list[VerificationRow]) -> float:
+    values: list[float] = []
+    for row in rows:
+        if row.eigenvector_error is not None:
+            values.append(row.eigenvector_error)
+    return max(values)
+
+
 def _write_report(output: Path, json_output: Path) -> None:
     rows = [_verify(case) for case in _cases()]
     pca_process = subprocess.run(
@@ -215,6 +223,20 @@ def _write_report(output: Path, json_output: Path) -> None:
             f"{_format(row.eigenvector_error)} | {_format(row.residual)} | "
             f"{_format(row.max_reported_residual)} | {_format(row.condition)} | "
             f"{row.rank}/{row.n} | {_format(row.orthogonality)} |"
+        )
+
+    comparable = [row for row in rows if row.eigenvector_error is not None]
+    if comparable:
+        lines.extend(
+            [
+                "",
+                f"Across the cases with distinct eigenvalues, the largest "
+                f"relative eigenvalue error is "
+                f"`{max(row.eigenvalue_error for row in comparable):.2e}` and "
+                f"the largest eigenvector error is "
+                f"`{_max_eigenvector_error(comparable):.2e}`. "
+                f"These are the headline numbers against NumPy.",
+            ]
         )
 
     defects = [row for row in rows if row.note]

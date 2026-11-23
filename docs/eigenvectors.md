@@ -58,6 +58,16 @@ per eigenvalue would cost `O(n^4)` in total; the implementation deliberately
 uses the quasi-triangular structure instead. `k` is usually one to three for
 well-separated eigenvalues and can grow when eigenvalues are clustered.
 
+## Why the eigenvectors are needed
+
+The eigenvalues alone cannot distinguish the identity matrix from a Jordan
+block with the same eigenvalue. Both `I2` and `[[1, 1], [0, 1]]` have the
+spectrum `{1, 1}`, but the identity has two independent eigenvectors while the
+Jordan block has only one. The rank of the returned eigenvector matrix exposes
+the difference; the generated results table includes both cases side by side.
+In PCA the eigenvalues give the explained variance, but only the eigenvectors
+give the directions and loadings of the components.
+
 ## Accuracy and limits
 
 - The eigenvalue error is governed by the QR iteration and is backward stable.

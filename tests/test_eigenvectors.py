@@ -139,6 +139,15 @@ def test_defective_three_by_three_is_reported() -> None:
     assert np.linalg.matrix_rank(vectors, tol=1e-8) == 1
 
 
+def test_eigenvalues_alone_cannot_detect_defectiveness() -> None:
+    jordan = eigen_qr([[1.0, 1.0], [0.0, 1.0]])
+    identity = eigen_qr(np.eye(2))
+    np.testing.assert_allclose(sorted(value.real for value in jordan.values), [1.0, 1.0])
+    np.testing.assert_allclose(sorted(value.real for value in identity.values), [1.0, 1.0])
+    assert np.linalg.matrix_rank(np.array(jordan.vectors), tol=1e-8) == 1
+    assert np.linalg.matrix_rank(np.array(identity.vectors), tol=1e-8) == 2
+
+
 def test_schur_form_and_householder_accumulation() -> None:
     rng = np.random.default_rng(3)
     matrix = rng.standard_normal((7, 7))

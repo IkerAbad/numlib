@@ -1,8 +1,8 @@
 name: Publish
 
+# The PyPI trusted publisher must be configured before this workflow can
+# upload: see docs/PUBLISHING.md. It is intentionally manual until then.
 on:
-  release:
-    types: [published]
   workflow_dispatch:
 
 permissions:
