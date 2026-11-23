@@ -1,0 +1,192 @@
+{
+  "eigenvectors": [
+    {
+      "case": "diagonal n=4",
+      "n": 4,
+      "eigenvalue_error": 0.0,
+      "eigenvector_error": 0.0,
+      "residual": 0.0,
+      "max_reported_residual": 0.0,
+      "condition": 1.0,
+      "rank": 4,
+      "orthogonality": 0.0,
+      "note": ""
+    },
+    {
+      "case": "rotation n=2",
+      "n": 2,
+      "eigenvalue_error": 0.0,
+      "eigenvector_error": 6.280369834735102e-16,
+      "residual": 1.2560739669470203e-15,
+      "max_reported_residual": 5.202828724532305e-16,
+      "condition": 1.0000000000000002,
+      "rank": 2,
+      "orthogonality": 3.1401849173675503e-16,
+      "note": ""
+    },
+    {
+      "case": "random general n=5",
+      "n": 5,
+      "eigenvalue_error": 2.472356712063884e-15,
+      "eigenvector_error": 4.151048021801334e-15,
+      "residual": 2.125824853822007e-15,
+      "max_reported_residual": 7.175590034548804e-16,
+      "condition": 1.9737441888601575,
+      "rank": 5,
+      "orthogonality": 1.1361718326813126,
+      "note": ""
+    },
+    {
+      "case": "random general n=8",
+      "n": 8,
+      "eigenvalue_error": 1.5978674406918621e-15,
+      "eigenvector_error": 6.393372135132868e-15,
+      "residual": 3.0454490852597384e-15,
+      "max_reported_residual": 7.051136843635823e-16,
+      "condition": 6.279507511422626,
+      "rank": 8,
+      "orthogonality": 2.3861824811713834,
+      "note": ""
+    },
+    {
+      "case": "symmetric n=6",
+      "n": 6,
+      "eigenvalue_error": 1.4281108282366558e-15,
+      "eigenvector_error": 8.604799313806898e-14,
+      "residual": 3.206678904198068e-14,
+      "max_reported_residual": 1.8437795471219196e-14,
+      "condition": 1.00000000000015,
+      "rank": 6,
+      "orthogonality": 2.1206515192150717e-13,
+      "note": ""
+    },
+    {
+      "case": "Wilkinson n=6",
+      "n": 6,
+      "eigenvalue_error": 1.9984014443252818e-15,
+      "eigenvector_error": 2.7017756906306007e-13,
+      "residual": 8.831163805353706e-14,
+      "max_reported_residual": 5.954861272619225e-14,
+      "condition": 1.0000000000005398,
+      "rank": 6,
+      "orthogonality": 7.632175044926418e-13,
+      "note": ""
+    },
+    {
+      "case": "repeated identity n=4",
+      "n": 4,
+      "eigenvalue_error": 0.0,
+      "eigenvector_error": null,
+      "residual": 0.0,
+      "max_reported_residual": 0.0,
+      "condition": 1.0,
+      "rank": 4,
+      "orthogonality": 0.0,
+      "note": "repeated eigenvalue"
+    },
+    {
+      "case": "repeated diagonal n=4",
+      "n": 4,
+      "eigenvalue_error": 0.0,
+      "eigenvector_error": null,
+      "residual": 0.0,
+      "max_reported_residual": 0.0,
+      "condition": 1.0,
+      "rank": 4,
+      "orthogonality": 0.0,
+      "note": "repeated eigenvalues"
+    },
+    {
+      "case": "defective Jordan n=2",
+      "n": 2,
+      "eigenvalue_error": 0.0,
+      "eigenvector_error": null,
+      "residual": 8.973825869789965e-16,
+      "max_reported_residual": 5.689177632308852e-16,
+      "condition": 1300077228592327.2,
+      "rank": 1,
+      "orthogonality": 1.4142135623730951,
+      "note": "defective"
+    },
+    {
+      "case": "defective Jordan n=3",
+      "n": 3,
+      "eigenvalue_error": 0.0,
+      "eigenvector_error": null,
+      "residual": 1.2588745812754728e-15,
+      "max_reported_residual": 5.800884395414734e-16,
+      "condition": 2.2179265304942772e+29,
+      "rank": 1,
+      "orthogonality": 2.449489742783178,
+      "note": "defective"
+    }
+  ],
+  "pca": {
+    "variables": [
+      "temperature",
+      "humidity",
+      "energy"
+    ],
+    "covariance": [
+      [
+        24.0,
+        11.0,
+        183.57142857142858
+      ],
+      [
+        11.0,
+        22.125,
+        83.83928571428571
+      ],
+      [
+        183.57142857142858,
+        83.83928571428571,
+        1406.6964285714287
+      ]
+    ],
+    "eigenvalues": [
+      1435.7109944499693,
+      17.067124950593936,
+      0.04330917086451791
+    ],
+    "components": [
+      [
+        0.1291765102886523,
+        -0.004337866408576681,
+        0.9916121278527542
+      ],
+      [
+        0.05971120875038897,
+        0.9982098632825888,
+        -0.003411802298319022
+      ],
+      [
+        0.9898222066306722,
+        -0.05965108348032507,
+        -0.12920428592121175
+      ]
+    ],
+    "explained_variance_ratio": [
+      0.9882226171882093,
+      0.011747572423526401,
+      2.981038826437479e-05
+    ],
+    "cumulative_variance_ratio": [
+      0.9882226171882093,
+      0.9999701896117357,
+      1.0
+    ],
+    "numpy_eigenvalues": [
+      1435.7109944499703,
+      17.067124950593755,
+      0.04330917086480935
+    ],
+    "numpy_explained_variance_ratio": [
+      0.9882226171882091,
+      0.011747572423526267,
+      2.981038826457537e-05
+    ],
+    "max_eigenvalue_difference": 9.094947017729282e-13,
+    "max_ratio_difference": 2.0058079004160734e-16
+  }
+}
