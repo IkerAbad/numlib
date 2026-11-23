@@ -12,7 +12,7 @@ from numlib.analysis import (
     forward_error,
     loss_of_orthogonality,
 )
-from numlib.eigen import Eigen, eigen_qr, eigenvalues, hessenberg
+from numlib.eigen import Eigen, eigen_qr, eigenvalues, eigenvectors, hessenberg
 from numlib.exceptions import (
     ConvergenceError,
     NumlibError,
@@ -28,6 +28,7 @@ from numlib.generators import (
 )
 from numlib.lstsq import LeastSquares, lstsq_normal, lstsq_qr
 from numlib.lu import LU, lu, solve
+from numlib.pca import PCA, pca
 from numlib.qr import QR, qr_gram_schmidt, qr_householder
 from numlib.svd import SVD, svd
 
@@ -35,6 +36,7 @@ __version__ = "0.1.0"
 
 __all__ = [
     "LU",
+    "PCA",
     "QR",
     "SVD",
     "ConvergenceError",
@@ -48,6 +50,7 @@ __all__ = [
     "condition_number",
     "eigen_qr",
     "eigenvalues",
+    "eigenvectors",
     "forward_error",
     "hessenberg",
     "hilbert",
@@ -55,6 +58,7 @@ __all__ = [
     "lstsq_normal",
     "lstsq_qr",
     "lu",
+    "pca",
     "qr_gram_schmidt",
     "qr_householder",
     "random_gaussian",
