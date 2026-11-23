@@ -30,6 +30,8 @@ jobs:
         run: mypy
       - name: Tests
         run: pytest
+      - name: README examples
+        run: python scripts/check_readme_examples.py
 
   figures:
     name: regenerate figures
@@ -50,3 +52,23 @@ jobs:
         with:
           name: figures
           path: figures/*.png
+
+  report:
+    name: regenerate measured results
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Generate
+        run: python scripts/generate_report.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: results
+          path: docs/
