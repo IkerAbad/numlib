@@ -1,6 +1,7 @@
 # numlib
 
 [![CI](https://github.com/IkerAbad/numlib/actions/workflows/ci.yml/badge.svg)](https://github.com/IkerAbad/numlib/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/numlib-linalg.svg)](https://pypi.org/project/numlib-linalg/)
 [![Release](https://img.shields.io/github/v/release/IkerAbad/numlib)](https://github.com/IkerAbad/numlib/releases/tag/v0.1.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/)
@@ -9,15 +10,10 @@ Dense numerical linear algebra implemented from scratch in Python. The
 algorithms operate on plain lists of floats; NumPy is used at the input/output
 boundary and in the benchmarks and verification scripts.
 
-> **Release status.** Version 0.1.0 is tagged and its wheel and sdist are
-> attached to the GitHub release. The PyPI project name `numlib-linalg` is
-> available, but the upload is waiting for the trusted-publisher configuration
-> described in [`docs/PUBLISHING.md`](docs/PUBLISHING.md). Until then, install
-> the wheel from the release assets.
-
-The PyPI distribution name is **`numlib-linalg`** because the name `numlib` is
-already registered by an unrelated number-theory package. The import package
-is still `numlib`.
+> **Package name and import name.** The PyPI distribution is **`numlib-linalg`**;
+> the Python import is **`numlib`**. Install with `pip install numlib-linalg`
+> and use `import numlib`. The names differ because `numlib` is already
+> registered on PyPI by an unrelated number-theory project.
 
 ## What is implemented
 
@@ -38,17 +34,14 @@ is still `numlib`.
 
 ## Install
 
-Until the PyPI upload is enabled, install the wheel attached to the v0.1.0
-release:
-
-```bash
-pip install https://github.com/IkerAbad/numlib/releases/download/v0.1.0/numlib_linalg-0.1.0-py3-none-any.whl
-```
-
-Once the trusted publisher is configured, the package will be installable with:
-
 ```bash
 pip install numlib-linalg
+```
+
+The distribution name is `numlib-linalg`; the import name is `numlib`:
+
+```bash
+python -c "import numlib; print(numlib.__version__)"
 ```
 
 From a clone, with the development tools:
@@ -251,7 +244,7 @@ repeated and defective matrices, and the LAPACK accuracy checks.
 ## Package name
 
 PyPI already hosts an unrelated project named `numlib` (a number-theory
-package, version 0.3.1). This project is therefore named
+package, version 0.3.1). This project is therefore published as
 **`numlib-linalg`**, version **0.1.0**, while the import package remains
 `numlib`:
 
@@ -260,10 +253,9 @@ pip install numlib-linalg
 python -c "import numlib; print(numlib.__version__)"
 ```
 
-The upload is pending the trusted-publisher configuration; see
-[`docs/PUBLISHING.md`](docs/PUBLISHING.md). The GitHub repository keeps the
-name `numlib`; the intended PyPI project page is
-<https://pypi.org/project/numlib-linalg/>.
+The GitHub repository keeps the name `numlib`; the PyPI project page is
+<https://pypi.org/project/numlib-linalg/>. The two names are deliberately
+different: `numlib-linalg` is the distribution, `numlib` is the module.
 
 ## Project layout
 

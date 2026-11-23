@@ -2,6 +2,22 @@
 
 Dense numerical linear algebra from scratch in Python.
 
+## Install
+
+```bash
+pip install numlib-linalg==0.1.0
+```
+
+The distribution is `numlib-linalg`; the import module is `numlib`.
+
+```python
+import numlib
+from numlib import eigen_qr
+```
+
+The names differ because `numlib` is already registered on PyPI by an unrelated
+number-theory package.
+
 ## Highlights
 
 - LU with partial and complete pivoting, triangular solves and growth factor.
@@ -17,20 +33,6 @@ Dense numerical linear algebra from scratch in Python.
 - PCA from a covariance matrix, with explained variance and loadings.
 - Test-matrix generators, LAPACK benchmarks, four regenerable figures and a
   generated eigenvector/PCA verification report.
-
-## Install
-
-The PyPI distribution name is `numlib-linalg`; the import package is `numlib`.
-
-The 0.1.0 wheel and sdist are attached to this release:
-
-```bash
-pip install https://github.com/IkerAbad/numlib/releases/download/v0.1.0/numlib_linalg-0.1.0-py3-none-any.whl
-```
-
-The PyPI upload is pending the trusted-publisher configuration documented in
-`docs/PUBLISHING.md`. Once configured, the same version will be installable
-with `pip install numlib-linalg==0.1.0`.
 
 ## Documentation
 
